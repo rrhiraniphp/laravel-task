@@ -22,6 +22,7 @@ class Films extends Resource
             'rating'=>$this->rating,
             'tiket_price'=>$this->tiket_price,
             'country'=>$this->country,
+            'photo'=>$this->photo,
         ];
     }
 }

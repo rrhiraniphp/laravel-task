@@ -49,6 +49,16 @@ class FilmsController extends Controller
         $film->rating = $request->input('rating');
         $film->tiket_price = $request->input('tiket_price');
         $film->country = $request->input('country');          
+
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageName = time().'.'.request()->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'), $imageName);
+
+        $film->photo = $imageName;  
+
  
         if($film->save()) {
             return new FilmsResource($film);
