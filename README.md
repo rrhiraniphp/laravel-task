@@ -38,3 +38,8 @@ gonna test apis","release_date":"2018-01-01","rating":"5","tiket_price":"500","c
 
 $ curl -H 'content-type: application/json' -v -X DELETE http://localhost:8000/api/films/:id
 
+# Registration and Authentication
+Login and Register Links will display on landing page
+http://127.0.0.1:8000/login
+http://127.0.0.1:8000/register
+
