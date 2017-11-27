@@ -23,7 +23,7 @@ class FilmsTableSeeder extends Seeder
                 'name' => $faker->sentence,
                 'description' => $faker->paragraph,
                 'release_date' => $faker->date($format = 'Y-m-d', $max = 'now'),
-                'rating' => $faker->shuffle(array(1, 2, 3,4,5)) ,
+                'rating' => $faker->numberBetween($min = 1, $max = 5) ,
                 'tiket_price' => $faker->numberBetween($min = 1000, $max = 5000) ,
                 'country' => $faker->country,
                 'photo' =>  $faker->sentence,
