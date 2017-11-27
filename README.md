@@ -1,18 +1,23 @@
 # Rest APIs
 
 // get list of films
+
 Route::get('films','FilmsController@index');
 
-// get specific task
+// get specific film
+
 Route::get('films/{id}','FilmsController@show');
 
 // create new film
+
 Route::post('films','FilmsController@store');
 
 // update existing film
+
 Route::put('films','FilmsController@store');
 
 // delete a film
+
 Route::delete('films/{id}','FilmsController@destroy');
 
 # How to access
